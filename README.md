@@ -8,6 +8,10 @@ After the clustering is performed, the code plots the resulting clusters in 3D s
 -------------------------------------------------------------
 DBSCAN algorithm is the main approach applied in this system
 A quick explanation of how it works:
+The algorithm works by dividing the data into density-based clusters, where a cluster is defined as a region of high density surrounded by a region of low density.
+The algorithm takes two parameters: epsilon (ε), the maximum distance between two points for them to be considered part of the same cluster, and minPts, the minimum number of points needed to form a dense region.
+
+The steps of the DBSCAN algorithm are:
 1. Select an arbitrary point p from the data set that has not yet been visited.
 2. Take all points that are ε from p and add them to the new cluster.
 3. If the number of points in the cluster is less than minPts, mark p as a noise point and move to the next unwatched point.
@@ -18,5 +22,28 @@ The output of the DBSCAN algorithm is a set of clusters, where each cluster cont
 --------------------------------------------------------------
 
 Suppose this image is entered into the system:
+
 ![image](https://github.com/ARTI-c700/Image_color_clustering/assets/87066160/e9f9ee25-c9c8-48de-b6cf-ee8cba02bfc3)
 
+
+
+Then the system returns such a graphic result:
+
+![image](https://github.com/ARTI-c700/Image_color_clustering/assets/87066160/f51b0a2a-6880-4444-aa50-db04f18abf1e)
+
+
+
+The second part of the project:
+
+In this section, the DBSCAN clustering algorithm is again applied and used for image clustering. Specifically, it groups images based on their dominant color using extracted dominant color information as features for clustering.
+
+-----------------------------------------------------------------------------------------------------
+The general algorithm for this part can be organized as follows:
+
+1) Extracting the dominant colors of the input image(s) using the "Extract_dominant_colors" function.
+2) Collecting the dominant colors of all images in the database using the same function.
+3) Combining the input image(s) and the preferred color data for the database.
+4) Applying DBSCAN to dominant color data combined with epsilon and minPts as parameters to adjust cluster density and minimum cluster size.
+5) Finding the cluster(s) with the most dominant colors in common with the input image(s).
+6) Displaying the images that most closely match the inserted images in a cluster.
+-----------------------------------------------------------------------------------------------------
