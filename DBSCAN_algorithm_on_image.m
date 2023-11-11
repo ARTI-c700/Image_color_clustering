@@ -1,5 +1,6 @@
 % The initial image is loaded into the system:
-img_base = imread('C:\Users\User\Desktop\SE_Resources\Programming\CodingPractises\Matlab\ImageClusteringProject\val2014_test\COCO_val2014_000000000395.jpg');
+% in the Image_DataSet directory
+img_base = imread('Image_DataSet/COCO_val2014_000000113606.jpg');
 
 % The given image is resized to the specified number of pixels
 % (defaults to 360,000 pixels)
