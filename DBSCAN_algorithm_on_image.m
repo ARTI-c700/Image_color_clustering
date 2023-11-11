@@ -1,12 +1,12 @@
 % The initial image is loaded into the system:
 % in the Image_DataSet directory
-img_base = imread('Image_DataSet/COCO_val2014_000000113606.jpg');
+img_base = imread('Image_DataSet/COCO_val2014_000000114025.jpg');
 
 % The given image is resized to the specified number of pixels
 % (defaults to 360,000 pixels)
 % This is useful for faster results on weak computers
 
-outputSize = [250, 250];
+outputSize = [600, 600];
 img_base = imresize(img_base, outputSize);
 
 
