@@ -5,6 +5,7 @@ This project mainly consists of two parts:
 The first part is the application of DBSCAN (Density-Based Spatial Clustering of Applications with Noise) clustering algorithm on the input image. The problem it solves is to group pixels in an image that have similar colors using a clustering algorithm. This can be useful for tasks such as image segmentation or identifying regions of an image that have similar color characteristics.
 After the clustering is performed, the code plots the resulting clusters in 3D space with colors corresponding to the input image. This can help visualize how the clustering algorithm groups pixels based on their color properties. The code also calculates a silhouette score, which is a measure of how well the clusters are defined and how well they are separated from each other.
 
+
 -------------------------------------------------------------
 DBSCAN algorithm is the main approach applied in this system
 A quick explanation of how it works:
@@ -20,6 +21,7 @@ The steps of the DBSCAN algorithm are:
 6. Any unvisited points that are not part of a cluster are marked as noise().
 The output of the DBSCAN algorithm is a set of clusters, where each cluster contains a group of points that are close to each other in the high-dimensional space and a set of noise points that do not belong to any cluster.
 --------------------------------------------------------------
+
 
 Suppose this image is entered into the system:
 
@@ -37,6 +39,7 @@ The second part of the project:
 
 In this section, the DBSCAN clustering algorithm is again applied and used for image clustering. Specifically, it groups images based on their dominant color using extracted dominant color information as features for clustering.
 
+
 -----------------------------------------------------------------------------------------------------
 The general algorithm for this part can be organized as follows:
 
@@ -47,3 +50,23 @@ The general algorithm for this part can be organized as follows:
 5) Finding the cluster(s) with the most dominant colors in common with the input image(s).
 6) Displaying the images that most closely match the inserted images in a cluster.
 -----------------------------------------------------------------------------------------------------
+
+Let's check the example on a picture:
+![image](https://github.com/ARTI-c700/Image_color_clustering/assets/87066160/2bd8c9e8-d8e2-4137-89f9-399e6ef9e7ba)
+
+For the login image:
+
+![image](https://github.com/ARTI-c700/Image_color_clustering/assets/87066160/d7bd01ff-4210-44c7-a1a4-b0dc8fbe705f)
+
+
+
+Given the dominant colors of the first image, it returns the best match to that dominant color from the image base as follows.
+
+
+![image](https://github.com/ARTI-c700/Image_color_clustering/assets/87066160/52cfc46c-a5c4-4ab9-a875-546b569f28f8)
+
+
+For the output image:
+
+![image](https://github.com/ARTI-c700/Image_color_clustering/assets/87066160/e745ccfe-6bdc-4492-89c5-e8551bbd7e22)
+
